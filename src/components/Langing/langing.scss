@@ -1,0 +1,53 @@
+@import "src/assets/scss/mixins";
+@import "src/assets/scss/variables";
+
+.container{
+  @include flex(flex, column, center, center, no-wrap);
+
+  .welcome__text{
+    h1{
+      @include font-face($langing_text_font, normal, normal, $langing_text_size, 119px, center, none);
+      color: $langing_text_color;
+    }
+  }
+
+  .buttons {
+    @include flex(flex, column, center, center, no-wrap);
+    .btn__start{
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 29px;
+      text-align: center;
+      margin: 18px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      color: #FFFFFF;
+      width: 395px;
+      height: 79px;
+      background: #FE3B1F;
+      border: none;
+      border-radius: 50px;
+    }
+
+    .submitted__applications {
+      width: 338px;
+      height: 66px;
+
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 29px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration-line: underline;
+
+      color: #FFFFFF;
+    }
+  }
+}

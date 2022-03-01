@@ -1,0 +1,70 @@
+
+@mixin margin(
+  $top:0,
+  $right:0,
+  $bottom:0,
+  $left:0
+) {
+  margin: $top $right $bottom $left;
+}
+
+@mixin padding(
+  $top:0,
+  $right:0,
+  $bottom:0,
+  $left:0
+) {
+  padding: $top $right $bottom $left;
+}
+
+@mixin wh($w:fit-content, $miw:fit-content, $maw:fit-content, $h:fit-content, $mih:fit-content, $mah:fit-content ) {
+  width: $w;
+  min-width: $miw;
+  max-width: $maw;
+  height: $h;
+  min-height: $mih;
+  max-height: $mah;
+}
+
+@mixin flex($display, $direction, $justifyContent, $alignItems, $wrap){
+  display: $display;
+  flex-direction: $direction;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+  flex-wrap: $wrap;
+}
+
+@mixin position($position) {
+  position: absolute;
+
+  @if $position == 'vertical' {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  @else if $position == 'horizontal' {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translate(-50%);
+  }
+  @else if $position == 'both' {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+
+@mixin font-face($family, $style, $weight, $size, $height, $align, $decoration) {
+  font-family: $family;
+  font-style: $style;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  text-align: $align;
+  text-decoration-line: $decoration;
+}
+
